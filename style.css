@@ -148,3 +148,22 @@ ul.purple:hover {
   height: 100%;
   z-index: -1;
 }
+
+.blinking {
+  animation: opacity 1s ease-in-out infinite;
+  opacity: 1;
+}
+
+@keyframes opacity {
+  0% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
