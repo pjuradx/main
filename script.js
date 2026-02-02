@@ -56,31 +56,6 @@ function setSlide(n) {
 
 setSlide(slideIndex);
 
-// Weather
-const apiKey = 'b06472030c3555d99176b6886a19e55c';
-const city = 'Madrid,ES';
-let weatherString = '';
-
-async function updateWeather() {
-	try {
-		const response = await fetch(
-			`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric&lang=en`
-		);
-		const data = await response.json();
-
-		// Temperature and description
-		const temp = Math.round(data.main.temp);
-		const desc = data.weather[0].description;
-
-		// Formatting the text
-		weatherString = ` | ${temp}°C ${desc.charAt(0).toUpperCase() + desc.slice(1)}`;
-	} catch (error) {
-		console.error("Error al obtener el clima:", error);
-		weatherString = ''; // If error, don't show anything
-	}
-}
-updateWeather();
-
 // Clock
 function updateClock() {
 	const now = new Date();
@@ -90,8 +65,8 @@ function updateClock() {
 	const year = now.getFullYear();
 	const time = now.toLocaleTimeString('en-GB', { hour: '2-digit', minute: '2-digit', second: '2-digit' });
 
-	// Date, time and weather combined
-	const dateString = `${day.charAt(0).toUpperCase() + day.slice(1).toLowerCase()} ${dayOfMonth}-${month}-${year} ${time}${weatherString}`;
+	// Date and time
+	const dateString = `${day.charAt(0).toUpperCase() + day.slice(1).toLowerCase()} ${dayOfMonth}-${month}-${year} ${time}`;
 
 	document.getElementById('codes').textContent = dateString;
 	setTimeout(updateClock, 1000);
