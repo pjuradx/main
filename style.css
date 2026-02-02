@@ -1,5 +1,7 @@
 @font-face {
   font-family: "IBM Plex Mono", monospace;
+  font-weight: 400;
+  font-style: normal;
   src: url('assets/IBMPlexMono.ttf');
 }
 
