@@ -65,23 +65,23 @@ ul>li>a:hover {
 }
 
 ul.green:hover {
-  color: #1b8a5a;
+  color: #1B8A5A;
 }
 
 ul.blue:hover {
-  color: #0972D6;
+  color: #075FB0;
 }
 
 ul.red:hover {
-  color: #ed3434;
+  color: #A90F0F;
 }
 
 ul.yellow:hover {
-  color: #edd934;
+  color: #BCAB10;
 }
 
 ul.purple:hover {
-  color: #a374ff;
+  color: #6E00B8;
 }
 
 .nav-title {
